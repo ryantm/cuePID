@@ -8,5 +8,5 @@ main = do
   args <- getArgs
   (_,_,_,p) <- createProcess $ shell $ unwords args
   exitCode <- waitForProcess p
-  putStrLn $ show exitCode
+  print exitCode
   return ()
